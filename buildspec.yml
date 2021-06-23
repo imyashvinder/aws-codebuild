@@ -7,8 +7,12 @@ phases:
       nodejs: 10
   build:
     commands:
-      - echo $CODEBUILD_SRC_DIR
-      - ls -l $CODEBUILD_SRC_DIR/
+      - echo Building the Go code...
+      - cd $CODEBUILD_SRC_DIR/my-source/golang-app
+      - go build hello.go 
+      - echo Building the Node code...
+      - cd $CODEBUILD_SRC_DIR/my-source/nodejs-app
+      - npm run test
 artifacts:
   secondary-artifacts:
     golang_artifacts:
