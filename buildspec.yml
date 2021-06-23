@@ -22,4 +22,4 @@ phases:
 artifacts:
   files:
     - '*/hello'   
-  base-directory: my-source/golang-app
+  base-directory: my-source
