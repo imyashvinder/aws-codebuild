@@ -21,14 +21,5 @@ phases:
       - ls -l $CODEBUILD_SRC_DIR/my-source/nodejs-app
 artifacts:
   files:
-    - $CODEBUILD_SRC_DIR/my-source/golang-app/hello   
-#  secondary-artifacts:
-#    golang_artifacts:
-#      base-directory: golang-app
-#      files:
-#        - hello
-#    nodejs_artifacts:
-#      base-directory: nodejs-app
-#      files:
-#        - index.js
-#        - package.json
+    - '*/hello'   
+  base-directory: my-source/golang-app
